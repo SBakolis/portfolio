@@ -7,4 +7,5 @@ import icon from "astro-icon";
 export default defineConfig({
   integrations: [tailwind(), icon()],
   site: "https://sbakolis.github.io",
+  base: "portfolio",
 });
