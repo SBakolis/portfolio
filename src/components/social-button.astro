@@ -1,0 +1,11 @@
+---
+	import { Icon } from 'astro-icon/components'
+
+	const { icon } = Astro.props
+---
+
+<button class="cursor-pointer transition-all bg-neutral-800 text-white text-lg px-4 py-3 mr-1 rounded-md border-fuchsia-800
+				border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]	hover:shadow-lg hover:shadow-fuchsia-800 shadow-fuchsia-800"
+>
+	<Icon name={icon} />
+</button>

@@ -1,16 +1,36 @@
 ---
+import { Image } from 'astro:assets';
+
+import BentoGrid from "../components/bento-grid.astro";
+import GridCell from "../components/grid-cell.astro";
+import PageLayout from "../layouts/page-layout.astro";
+
+import profileAvatar from "../assets/profile-avatar.png"
+import SocialButton from '../components/social-button.astro';
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<PageLayout>
+	<BentoGrid cols="grid-cols-4" rows="grid-rows-5">
+		<GridCell colSpan="col-span-3" rowSpan="row-span-2">
+			<div class="flex flex-raw justify-between">
+				<div class="flex flex-col justify-between pt-4">
+					<div>
+						<h3 class="text-3xl">Hi, I'm Stamatis</h3>
+						<p class="text-zinc-500">a software developer with strong focus on user experience, animations and micro interactions</p>
+					</div>
+					<div class="flex items-end">
+						<SocialButton icon="grommet-icons:github"/>
+						<SocialButton icon="grommet-icons:linkedin"/>
+					</div>
+				</div>
+				<Image src={profileAvatar} height="200" alt="A bird sitting on a nest of eggs."/>
+			</div>
+		</GridCell>
+		<GridCell colSpan="col-span-1" rowSpan="row-span-4"></GridCell>
+		<GridCell colSpan="col-span-2" rowSpan="row-span-2"></GridCell>
+		<GridCell colSpan="col-span-1" rowSpan="row-span-1"></GridCell>
+		<GridCell colSpan="col-span-1" rowSpan="row-span-1"></GridCell>
+		<GridCell colSpan="col-span-4" rowSpan="row-span-1"></GridCell>
+	</BentoGrid>
+</PageLayout>
