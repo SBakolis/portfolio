@@ -6,16 +6,16 @@
 
 ---
 
-<div class="flex flex-raw justify-between">
-	<div class="flex flex-col justify-between pt-4">
+<div class="flex flex-raw relative justify-between h-[180px] md:h-auto">
+	<div class=" flex flex-col justify-between pt-4">
 		<div>
-			<h3 class="text-3xl">Hi, I'm Stamatis</h3>
-			<p class="text-zinc-400">a software developer with strong focus on user experience, animations and micro interactions</p>
+			<h3 class="pb-3 md:p-0 text-3xl">Hi, I'm Stamatis</h3>
+			<p class="text-zinc-100 md:text-zinc-400 mb-2 md:mb-0">a software developer with strong focus on user experience, animations and micro interactions</p>
 		</div>
 		<div class="flex items-end">
 			<SocialButton icon="grommet-icons:github"/>
 			<SocialButton icon="grommet-icons:linkedin"/>
 		</div>
 	</div>
-	<Image src={profileAvatar} height="200" alt="A bird sitting on a nest of eggs."/>
+	<Image class="absolute bottom-0 -right-10 opacity-50 md:opacity-100 md:relative md:right-auto md:bottom-auto" src={profileAvatar} height="200" alt="A bird sitting on a nest of eggs."/>
 </div>
