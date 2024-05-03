@@ -10,20 +10,20 @@ import Current from "../components/current.astro";
 ---
 
 <PageLayout>
-	<BentoGrid cols="grid-cols-4" rows="grid-rows-5">
-		<GridCell colSpan="col-span-3" rowSpan="row-span-2">
+	<BentoGrid cols="grid-cols-4" rows="grid-rows-6 md:grid-rows-5">
+		<GridCell colSpan="col-span-4 md:col-span-3" rowSpan="row-span-1 md:row-span-2">
 			<Intro />
 		</GridCell>
-		<GridCell colSpan="col-span-1" rowSpan="row-span-4">
+		<GridCell colSpan="col-span-4 md:col-span-1" rowSpan="row-span-1 md:row-span-4">
 			<AboutMe/>
 		</GridCell>
-		<GridCell colSpan="col-span-2" rowSpan="row-span-2">
+		<GridCell colSpan="col-span-4 md:col-span-2" rowSpan="row-span-2 md:row-span-2">
 			<Timeline />
 		</GridCell>
-		<GridCell colSpan="col-span-1" rowSpan="row-span-1">
+		<GridCell colSpan="col-span-4 md:col-span-1" rowSpan="row-span-1 md:row-span-1" height="h-[140px] md:h-auto">
 			<Current/>
 		</GridCell>
-		<GridCell colSpan="col-span-1" rowSpan="row-span-1">
+		<GridCell colSpan="col-span-4 md:col-span-1" rowSpan="row-span-1 md:row-span-1" height="h-[120px] md:h-auto">
 			<ViewCv/>
 		</GridCell>
 	</BentoGrid>
