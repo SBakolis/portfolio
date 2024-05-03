@@ -1,0 +1,42 @@
+---
+import TimelineEvent from "./timeline-event.astro";
+
+import vivaComLogo from "../../assets/vivacom.png";
+import pawLogo from "../../assets/paw.png";
+import freelanceLogo from "../../assets/briefcase.jpg";
+
+
+---
+
+<div class="relative h-[240px] overflow-y-scroll scrollbar-thin scrollbar-thumb-zinc-800 scrollbar-thumb-rounded-full">
+	<div class="absolute">
+		<TimelineEvent
+			icon={ vivaComLogo }
+			period="March 2023 - today"
+			headline="Software Engineer (Front)"
+			subtitle="Worked on the company's core projects including customer onboarding, smart chaeckout and banking app."
+			workplace="viva.com"
+		/>
+		<TimelineEvent
+			icon={ pawLogo }
+			period="Apr 2022 - Jan 2023"
+			headline="React Developer"
+			subtitle="Developed the frontend for the project's landing page and NFT marketplace"
+			workplace="PigsAtWar.xyz"
+		/>
+		<TimelineEvent
+			icon={ freelanceLogo }
+			period="Jul 2018 - Apr 2022"
+			headline="Web Developer"
+			subtitle="Developed multiple website and eshop pages for various clients."
+			workplace="Freelance"
+		/>
+		<TimelineEvent
+			icon={ freelanceLogo }
+			period="Nov 2019 - Feb 2020"
+			headline="Game Developer"
+			subtitle="Developed various android games with Unity Engine and joined Ludum Dare #39"
+			workplace="Freelance"
+		/>
+	</div>
+</div>

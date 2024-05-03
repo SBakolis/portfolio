@@ -1,0 +1,12 @@
+---
+	import { Icon } from 'astro-icon/components';
+
+	import myCV from '../assets/stamatis_bakolis_cv.pdf';
+---
+<div>
+	<h2 class="pb-3 text-lg text-white">My CV</h2>
+	<a href={myCV} target="_blank" class="bg-fuchsia-800 hover:bg-fuchsia-900 text-white py-2 px-4 rounded inline-flex items-center gap-x-2">
+		<Icon name="grommet-icons:view"/>
+		View CV
+	</a>
+</div>

@@ -1,0 +1,41 @@
+---
+	import { Image } from 'astro:assets';
+	import type { ImageMetadata } from 'astro';
+
+	interface Props {
+		period: string,
+		workplace: string,
+		headline: string,
+		subtitle?: string,
+		icon: ImageMetadata
+	}
+
+	const { period, workplace, headline, subtitle, icon } = Astro.props
+---
+
+<div class="ps-2 my-2 first:mt-0">
+	<h3 class="text-xs font-medium uppercase text-gray-500 dark:text-neutral-400">
+		{ period }
+	</h3>
+</div>
+
+<div class="flex gap-x-3">
+	<div class="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700">
+		<div class="relative z-10 size-7 flex justify-center items-center">
+			<div class="size-2 rounded-full bg-gray-400 dark:bg-neutral-600"></div>
+		</div>
+	</div>
+
+	<div class="grow pt-0.5 pb-6">
+		<h3 class="flex gap-x-1.5 font-semibold text-gray-800 dark:text-white">
+			{ headline }
+		</h3>
+		<p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+			{ subtitle }
+		</p>
+		<div class="mt-3 -ms-2 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent ring-1 ring-fuchsia-900">
+			<Image class="flex-shrink-0 size-6 rounded-full" src={icon} alt="Workplace logo"/>
+			{ workplace }
+		</div>
+	</div>
+</div>
